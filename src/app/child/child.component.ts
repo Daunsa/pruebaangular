@@ -8,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class ChildComponent implements OnInit {
 
   @Input() childPost: any[] = []
-  @Output() passedevent = new EventEmitter();
+  @Output() passedEvent = new EventEmitter();
   data: string = 'Child data';
 
   constructor() { }
@@ -18,6 +18,6 @@ export class ChildComponent implements OnInit {
   
   PassEvent(){
     console.log("dsdsa")
-    this.passedevent.emit(this.data);
+    this.passedEvent.emit(this.data);
   }
 }
